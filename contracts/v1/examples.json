@@ -1,0 +1,110 @@
+{
+  "problem": {
+    "id": "stable-softmax",
+    "version": 1,
+    "title": "Stable Softmax",
+    "judge_type": "python_numpy",
+    "signature": "softmax(x)",
+    "prompt": "Return the softmax probabilities for a nonempty one-dimensional NumPy array of finite real logits. Preserve its shape and return finite probabilities even for large logits.",
+    "starter_code": "import numpy as np\n\ndef softmax(x):\n    pass\n",
+    "examples": [
+      {
+        "input": [
+          0,
+          0
+        ],
+        "expected": [
+          0.5,
+          0.5
+        ]
+      }
+    ]
+  },
+  "submit_request": {
+    "problem_id": "stable-softmax",
+    "problem_version": 1,
+    "mode": "submit",
+    "source": "def softmax(x):\n    return x"
+  },
+  "submit_response": {
+    "id": "sub-001",
+    "status": "queued"
+  },
+  "poll_running": {
+    "id": "sub-001",
+    "problem_id": "stable-softmax",
+    "problem_version": 1,
+    "mode": "submit",
+    "source": "def softmax(x):\n    return x",
+    "status": "running"
+  },
+  "claim_response": {
+    "id": "sub-001",
+    "problem_id": "stable-softmax",
+    "problem_version": 1,
+    "mode": "submit",
+    "source": "def softmax(x):\n    return x",
+    "judge_type": "python_numpy",
+    "lease_id": "example-lease-1"
+  },
+  "complete_request": {
+    "lease_id": "example-lease-1",
+    "verdict": "wrong_answer",
+    "passed": 0,
+    "total": 1,
+    "feedback": "The output does not match the expected probabilities."
+  },
+  "poll_finished": {
+    "id": "sub-001",
+    "problem_id": "stable-softmax",
+    "problem_version": 1,
+    "mode": "submit",
+    "source": "def softmax(x):\n    return x",
+    "status": "finished",
+    "verdict": "wrong_answer",
+    "passed": 0,
+    "total": 1,
+    "feedback": "The output does not match the expected probabilities."
+  },
+  "history_response": {
+    "items": [
+      {
+        "id": "sub-001",
+        "problem_id": "stable-softmax",
+        "problem_version": 1,
+        "mode": "submit",
+        "status": "finished",
+        "verdict": "wrong_answer"
+      }
+    ],
+    "solved": false
+  },
+  "public_run_result": {
+    "id": "sub-002",
+    "problem_id": "stable-softmax",
+    "problem_version": 1,
+    "mode": "run",
+    "source": "def softmax(x):\n    return x",
+    "status": "finished",
+    "verdict": "wrong_answer",
+    "passed": 0,
+    "total": 1,
+    "feedback": "The output does not match the expected probabilities.",
+    "examples": [
+      {
+        "input": [
+          0,
+          0
+        ],
+        "expected": [
+          0.5,
+          0.5
+        ],
+        "actual": [
+          0,
+          0
+        ]
+      }
+    ]
+  }
+}
