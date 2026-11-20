@@ -1,0 +1,22 @@
+{
+  "questions": [
+    {
+      "id": "first-zero",
+      "prompt": "Which intermediate value first rounds to zero in the original starter for logits [[0, -1000]] and labels [1]?",
+      "options": {
+        "A": "The exponential of the first class score",
+        "B": "The exponential of the correct class score",
+        "C": "The sum of the exponentials"
+      }
+    },
+    {
+      "id": "infinite-loss",
+      "prompt": "Which operation then produces positive infinity?",
+      "options": {
+        "A": "Dividing the zero numerator by the row sum",
+        "B": "Taking the mean of finite losses",
+        "C": "Taking the negative logarithm of the zero probability"
+      }
+    }
+  ]
+}

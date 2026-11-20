@@ -1,0 +1,30 @@
+{
+  "id": "stable-cross-entropy-backward",
+  "version": 1,
+  "title": "Implement the backward pass",
+  "judge_type": "python_numpy",
+  "signature": "cross_entropy_backward(logits, labels)",
+  "prompt": "Derive the gradient of the mean batch loss with respect to each class score on paper. Using NumPy, return a finite array of the same shape as logits. Inputs and tolerances match the forward problem. For reflection, invent a two-row example that catches differentiating the sum instead of the mean. How far off would the answer be?",
+  "starter_code": "import numpy as np\n\ndef cross_entropy_backward(logits, labels):\n    pass\n",
+  "examples": [
+    {
+      "input": {
+        "logits": [
+          [
+            0,
+            0
+          ]
+        ],
+        "labels": [
+          1
+        ]
+      },
+      "expected": [
+        [
+          0.5,
+          -0.5
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "stable-cross-entropy",
+  "version": 1,
+  "title": "Why did the loss become infinite?",
+  "judge_type": "python_numpy",
+  "signature": "cross_entropy(logits, labels)",
+  "prompt": "A classifier gives the correct class a score of −1000 and the other class a score of 0. Both scores are finite, but the starter returns infinity. Repair cross_entropy to return the mean cross-entropy across the batch. For scores z and correct class y, the per-row loss is −ln(exp(z[y]) / sum(exp(z[j]))). You may rewrite this formula. Use Python and NumPy. logits is a float64 array with shape (N, C), 1 ≤ N ≤ 128, 2 ≤ C ≤ 256 and scores in [−10000, 10000]. labels is an integer array of shape (N,) with a valid class index for each row. Return one finite scalar. Absolute and relative tolerances are both 1e-6.",
+  "starter_code": "import numpy as np\n\ndef cross_entropy(logits, labels):\n    scores = np.exp(logits)\n    probs = scores / scores.sum(axis=1, keepdims=True)\n    correct_probs = probs[np.arange(len(labels)), labels]\n    return -np.log(correct_probs).mean()\n",
+  "examples": [
+    {
+      "input": {
+        "logits": [
+          [
+            0,
+            0
+          ]
+        ],
+        "labels": [
+          0
+        ]
+      },
+      "expected": 0.6931471805599453
+    },
+    {
+      "input": {
+        "logits": [
+          [
+            0,
+            -1000
+          ]
+        ],
+        "labels": [
+          1
+        ]
+      },
+      "expected": 1000
+    },
+    {
+      "input": {
+        "logits": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            -1000
+          ]
+        ],
+        "labels": [
+          0,
+          1
+        ]
+      },
+      "expected": 500.34657359027995
+    }
+  ]
+}
